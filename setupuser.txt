@@ -1,0 +1,3 @@
+user = User.new(:email => 'test_account@test.com', :password => 'g0tham1st')
+user.skip_confirmation!
+user.save
