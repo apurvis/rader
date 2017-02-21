@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20170221073702) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean  "arrested"
+    t.string   "notes"
   end
 
   create_table "users", force: :cascade do |t|
