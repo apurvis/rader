@@ -1,0 +1,27 @@
+%h2
+  = link_to 'Create New Raid', new_raid_path
+
+%table
+  %th
+    %td
+      type_of_raid
+    %td
+      raided_at
+    %td
+      zip_code
+    %td
+      name_of_answerer
+    %td
+      age_of_answerer
+    %td
+      how_did_ice_make_its_presence_known
+    %td
+      narrative_of_door_interaction
+    %td
+      narrative_of_entrance
+    %td
+      narrative_of_interaction_inside_home
+    %td
+      notes
+
+  = render @raids

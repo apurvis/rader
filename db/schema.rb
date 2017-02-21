@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170215085207) do
+ActiveRecord::Schema.define(version: 20170221073702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,9 +39,9 @@ ActiveRecord::Schema.define(version: 20170215085207) do
     t.text     "narrative_of_door_interaction"
     t.text     "narrative_of_entrance"
     t.text     "narrative_of_interaction_inside_home"
-    t.integer  "number_of_arrests"
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
+    t.string   "notes"
   end
 
   create_table "raids_clients", force: :cascade do |t|
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170215085207) do
     t.integer  "client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "arrested"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,37 @@
+= form_for(@raid) do |f|
+  .form-inputs
+    = f.label :type_of_raid
+    = f.text_field :type_of_raid
+
+    = f.label :raided_at
+    = f.datetime_field :raided_at
+
+    = f.label :address
+    = f.text_field :address
+
+    = f.label :zip_code
+    = f.number_field :zip_code
+
+    = f.label :name_of_answerer
+    = f.text_field :name_of_answerer
+
+    = f.label :age_of_answerer
+    = f.range_field :age_of_answerer, in: 1..110
+
+    = f.label :how_did_ice_make_its_presence_known
+    = f.text_area :how_did_ice_make_its_presence_known
+
+    = f.label :narrative_of_door_interaction
+    = f.text_area :narrative_of_door_interaction
+
+    = f.label :narrative_of_entrance
+    = f.text_area :narrative_of_entrance
+
+    = f.label :narrative_of_interaction_inside_home
+    = f.text_field :narrative_of_interaction_inside_home
+
+    = f.label :notes
+    = f.text_field :notes
+
+  .form-actions
+    = f.button :submit
