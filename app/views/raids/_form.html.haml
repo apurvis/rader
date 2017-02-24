@@ -1,37 +1,58 @@
-= form_for(@raid) do |f|
-  .form-inputs
-    = f.label :type_of_raid
-    = f.text_field :type_of_raid
+= form_for(@raid, html: {class: 'form-horizontal'}) do |f|
+  .form-group
+    = f.label :type_of_raid, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :type_of_raid, class: 'form-control'
 
-    = f.label :raided_at
-    = f.datetime_field :raided_at
+  .form-group
+    = f.label :raided_at, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.datetime_field :raided_at, class: 'form-control'
 
-    = f.label :address
-    = f.text_field :address
+  .form-group
+    = f.label :address, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :address, class: 'form-control'
 
-    = f.label :zip_code
-    = f.number_field :zip_code
+  .form-group
+    = f.label :zip_code, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.number_field :zip_code, class: 'form-control'
 
-    = f.label :name_of_answerer
-    = f.text_field :name_of_answerer
+  .form-group
+    = f.label :name_of_answerer, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :name_of_answerer, class: 'form-control'
 
-    = f.label :age_of_answerer
-    = f.range_field :age_of_answerer, in: 1..110
+  .form-group
+    = f.label :age_of_answerer, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.range_field :age_of_answerer, in: 1..110, class: 'form-control'
 
-    = f.label :how_did_ice_make_its_presence_known
-    = f.text_area :how_did_ice_make_its_presence_known
+  .form-group
+    = f.label :how_did_ice_make_its_presence_known, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :how_did_ice_make_its_presence_known, class: 'form-control'
 
-    = f.label :narrative_of_door_interaction
-    = f.text_area :narrative_of_door_interaction
+  .form-group
+    = f.label :narrative_of_door_interaction, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :narrative_of_door_interaction, class: 'form-control'
 
-    = f.label :narrative_of_entrance
-    = f.text_area :narrative_of_entrance
+  .form-group
+    = f.label :narrative_of_entrance, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :narrative_of_entrance, class: 'form-control'
 
-    = f.label :narrative_of_interaction_inside_home
-    = f.text_field :narrative_of_interaction_inside_home
+  .form-group
+    = f.label :narrative_of_interaction_inside_home, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :narrative_of_interaction_inside_home, class: 'form-control'
 
-    = f.label :notes
-    = f.text_field :notes
+  .form-group
+    = f.label :notes, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :notes
 
   .form-actions
     = f.button :submit
