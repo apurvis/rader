@@ -1,0 +1,13 @@
+= form_for(@raids_client, html: { class: 'form-horizontal' }) do |f|
+  .form-group
+    = f.label :raid, class: 'col-sm-4 control-label'
+    .col-sm-10
+      = @raids_client.raid.to_s
+      = f.hidden_field :raid_id, value: @raids_client.raid.id
+  .form-group
+    = f.label :client, class: 'col-sm-4 control-label'
+    .col-sm-10
+      = f.collection_select(:client_id, Client.all, :id, :name)
+
+  .form-actions
+    = f.button :submit

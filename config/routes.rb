@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   resources :clients
   resources :raids
-  resources :raids_client
+  resources :raids_clients
 end

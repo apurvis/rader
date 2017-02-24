@@ -1,2 +1,2 @@
 = render partial: 'raids_table', locals: { raids: [@raid] }
-= link_to 'Add client to raid', new_raids_client_path
+= link_to 'Add client to raid', controller: 'raids_clients', action: :new, raid_id: @raid.id
