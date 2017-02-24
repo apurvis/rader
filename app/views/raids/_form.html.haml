@@ -1,58 +1,58 @@
-= form_for(@raid, html: {class: 'form-horizontal'}) do |f|
+= form_for(@raid, html: { class: 'form-horizontal' }) do |f|
   .form-group
-    = f.label :type_of_raid, class: 'col-sm-2 control-label'
+    = f.label :type_of_raid, class: 'col-sm-4 control-label'
     .col-sm-10
       = f.text_field :type_of_raid, class: 'form-control'
 
   .form-group
-    = f.label :raided_at, class: 'col-sm-2 control-label'
+    = f.label :raided_at, class: 'col-sm-4 control-label'
     .col-sm-10
       = f.datetime_field :raided_at, class: 'form-control'
 
   .form-group
-    = f.label :address, class: 'col-sm-2 control-label'
+    = f.label :address, class: 'col-sm-4 control-label'
     .col-sm-10
       = f.text_field :address, class: 'form-control'
 
   .form-group
-    = f.label :zip_code, class: 'col-sm-2 control-label'
+    = f.label :zip_code, class: 'col-sm-4 control-label'
     .col-sm-10
       = f.number_field :zip_code, class: 'form-control'
 
   .form-group
-    = f.label :name_of_answerer, class: 'col-sm-2 control-label'
+    = f.label :name_of_answerer, class: 'col-sm-4 control-label'
     .col-sm-10
       = f.text_field :name_of_answerer, class: 'form-control'
 
   .form-group
-    = f.label :age_of_answerer, class: 'col-sm-2 control-label'
+    = f.label :age_of_answerer, class: 'col-sm-4 control-label'
     .col-sm-10
-      = f.range_field :age_of_answerer, in: 1..110, class: 'form-control'
+      = f.number_field :age_of_answerer, in: 1..110, class: 'form-control'
 
   .form-group
-    = f.label :how_did_ice_make_its_presence_known, class: 'col-sm-2 control-label'
+    = f.label :how_did_ice_make_its_presence_known?, class: 'col-sm-4 control-label'
     .col-sm-10
       = f.text_area :how_did_ice_make_its_presence_known, class: 'form-control'
 
   .form-group
-    = f.label :narrative_of_door_interaction, class: 'col-sm-2 control-label'
+    = f.label :narrative_of_door_interaction, class: 'col-sm-4 control-label'
     .col-sm-10
       = f.text_area :narrative_of_door_interaction, class: 'form-control'
 
   .form-group
-    = f.label :narrative_of_entrance, class: 'col-sm-2 control-label'
+    = f.label :narrative_of_entrance, class: 'col-sm-4 control-label'
     .col-sm-10
       = f.text_area :narrative_of_entrance, class: 'form-control'
 
   .form-group
-    = f.label :narrative_of_interaction_inside_home, class: 'col-sm-2 control-label'
+    = f.label :narrative_of_interaction_inside_building, class: 'col-sm-4 control-label'
     .col-sm-10
-      = f.text_field :narrative_of_interaction_inside_home, class: 'form-control'
+      = f.text_area :narrative_of_interaction_inside_home, class: 'form-control'
 
   .form-group
-    = f.label :notes, class: 'col-sm-2 control-label'
+    = f.label :notes, class: 'col-sm-4 control-label'
     .col-sm-10
-      = f.text_field :notes
+      = f.text_area :notes, class: 'form-control'
 
   .form-actions
     = f.button :submit
