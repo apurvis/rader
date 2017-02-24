@@ -1,2 +1,6 @@
 = render partial: 'raids_table', locals: { raids: [@raid] }
+
+%h3 Clients Impacted
+= render partial: 'clients/clients_table', locals: { clients: @raid.clients }
+
 = link_to 'Add client to raid', controller: 'raids_clients', action: :new, raid_id: @raid.id

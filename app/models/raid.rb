@@ -1,4 +1,5 @@
 class Raid < ApplicationRecord
+  has_many :raids_clients
   has_many :clients, through: :raids_clients
 
   def to_s

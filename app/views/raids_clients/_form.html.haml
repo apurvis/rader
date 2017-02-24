@@ -8,6 +8,14 @@
     = f.label :client, class: 'col-sm-4 control-label'
     .col-sm-10
       = f.collection_select(:client_id, Client.all, :id, :name)
+  .form-group
+    = f.label :arrested?, class: 'col-sm-4 control-label'
+    .col-sm-10
+      = f.check_box :arrested, class: 'form-control'
+  .form-group
+    = f.label :notes, class: 'col-sm-4 control-label'
+    .col-sm-10
+      = f.text_area :notes, class: 'form-control'
 
   .form-actions
     = f.button :submit
