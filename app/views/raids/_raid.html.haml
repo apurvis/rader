@@ -6,6 +6,8 @@
   %td
     = raid.zip_code
   %td
+    = raid.clients.size
+  %td
     = raid.name_of_answerer
   %td
     = raid.age_of_answerer
@@ -20,6 +22,6 @@
   %td
     = raid.notes
   %td
-    = link_to 'show', raid_path(raid)    
+    = link_to 'show', raid_path(raid)
   %td
     = link_to 'edit', edit_raid_path(raid)

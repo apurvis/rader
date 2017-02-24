@@ -7,8 +7,4 @@ class Raid < ApplicationRecord
   def to_s
     "#{type_of_raid} - #{zip_code}:#{raided_at}"
   end
-
-  def number_of_arrests
-    RaidsClient.where(raid_id: id, arrested: true).size
-  end
 end
