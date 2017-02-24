@@ -13,7 +13,7 @@ class RaidsClientsController < ApplicationController
     puts "slice: #{raids_client_params.slice(:raid_id, :client_id).pretty_inspect}"
     @raids_client = RaidsClient.where(raids_client_params.slice(:raid_id, :client_id)).first_or_create do |rc|
       rc.notes = raids_client_params[:notes]
-      rc.arrested = rc.arrested
+      rc.arrested = raids_client_params[:arrested]
     end
 
     puts "RC: #{@raids_client.pretty_inspect}"
