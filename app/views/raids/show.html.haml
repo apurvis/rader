@@ -1,4 +1,2 @@
-= render @raid
-
-= link_to 'Add client to raid', new_raid_client_path
-% Add client to raid
+= render partial: 'raids_table', locals: { raids: [@raid] }
+= link_to 'Add client to raid', new_raids_client_path

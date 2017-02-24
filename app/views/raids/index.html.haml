@@ -1,31 +1,4 @@
 %h2
   = link_to 'Create New Raid', new_raid_path
 
-.col-lg-12
-  %table.table.table-hover
-    %thead
-      %tr
-        %th
-          type_of_raid
-        %th
-          raided_at
-        %th
-          zip_code
-        %th
-          name_of_answerer
-        %th
-          age_of_answerer
-        %th
-          how_did_ice_make_its_presence_known
-        %th
-          narrative_of_door_interaction
-        %th
-          narrative_of_entrance
-        %th
-          narrative_of_interaction_inside_home
-        %th
-          notes
-        %th
-          edit
-    %tbody
-      = render @raids
+= render partial: 'raids_table', locals: { raids: @raids }
