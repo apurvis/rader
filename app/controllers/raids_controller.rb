@@ -38,7 +38,8 @@ class RaidsController < ApplicationController
       :narrative_of_interaction_inside_home,
       :raided_at,
       :type_of_raid,
-      :zip_code
+      :zip_code,
+      :notes
     )
   end
 end

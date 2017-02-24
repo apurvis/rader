@@ -1,3 +1,11 @@
 %h1 New Raid
 
+- if @raid.errors.any?
+  %h4
+    = pluralize(@raid.errors.count, "error")
+    prohibited this article from being saved
+  %ul
+    - @raid.errors.full_messages.each do |msg|
+      %li= msg
+
 = render 'form'
