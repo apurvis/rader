@@ -9,10 +9,12 @@ ruby '2.4.0'
 
 gem 'administrate'
 gem 'coffee-rails', '~> 4.2'
+gem 'countries'
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'bourbon'
 gem 'devise'
 gem 'devise_invitable'
+gem 'formtastic'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'jbuilder', '~> 2.5'
@@ -27,6 +29,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'

@@ -30,6 +30,7 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 
 Getting Started
 ---------------
+* `cp .env.example .env`
 
 Documentation and Support
 -------------------------
