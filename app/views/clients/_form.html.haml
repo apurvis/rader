@@ -19,7 +19,7 @@
       = f.select :country_of_origin, country_options, include_blank: true, class: 'form-control'
   .form-group
     = f.label :started_us_residence_at, class: 'col-sm-4 control-label'
-    .col-sm-10
+    .col-sm-4
       = f.date_field :started_us_residence_at, class: 'form-control'
   .form-group
     = f.label :family_in_us?, class: 'col-sm-4 control-label'
@@ -27,12 +27,12 @@
       = f.check_box :family_in_us, class: 'form-control'
   .form-group
     = f.label :contact_phone_number, class: 'col-sm-4 control-label'
-    .col-sm-10
+    .col-sm-4
       = f.telephone_field :contact_phone_number, class: 'form-control'
   .form-group
     = f.label :notes, class: 'col-sm-4 control-label'
     .col-sm-10
-      = f.text_field :notes, class: 'form-control'
+      = f.text_area :notes, class: 'form-control'
 
   .form-actions
     = f.button :submit, class: 'btn btn-primary'

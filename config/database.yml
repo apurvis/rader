@@ -1,4 +1,0 @@
-development:
-  adapter: postgresql
-  database: iceraids_development
-  pool: 5
