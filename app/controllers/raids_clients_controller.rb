@@ -1,4 +1,4 @@
-class RaidsClientsController < ApplicationController
+class RaidsClientsController < AuthenticatedController
   def new
     if params['raid_id']
       @raid = Raid.where(id: params['raid_id']).first

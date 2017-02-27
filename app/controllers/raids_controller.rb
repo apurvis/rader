@@ -1,4 +1,4 @@
-class RaidsController < ApplicationController
+class RaidsController < AuthenticatedController
   def index
     @raids = Raid.all
   end

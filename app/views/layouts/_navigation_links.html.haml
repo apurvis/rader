@@ -1,0 +1,7 @@
+#navbarNav.collapse.navbar-collapse
+  - if user_signed_in?
+    %ul.navbar-nav.mr-auto
+      %li.nav-item= link_to('Clients', clients_path, class: 'nav-link')
+      %li.nav-item= link_to('Raids', raids_path, class: 'nav-link')
+
+  = render 'layouts/nav_links_for_auth'
