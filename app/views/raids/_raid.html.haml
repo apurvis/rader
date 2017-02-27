@@ -8,7 +8,7 @@
   %td
     = raid.clients.size
   %td
-    = raid.raids_clients.select(&:arrested).size    
+    = raid.raids_clients.select(&:arrested).size
   %td
     = raid.name_of_answerer
   %td
@@ -21,6 +21,12 @@
     = raid.narrative_of_entrance
   %td
     = raid.narrative_of_interaction_inside_home
+  %td
+    = raid.response_to_medical_issues
+  %td
+    = raid.response_to_childcare_issues
+  %th
+    = raid.other_arrests
   %td
     = raid.notes
   %td
