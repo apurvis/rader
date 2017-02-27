@@ -1,4 +1,6 @@
 class Raid < ApplicationRecord
+  has_paper_trail
+
   has_many :raids_clients
   has_many :clients, through: :raids_clients
 
