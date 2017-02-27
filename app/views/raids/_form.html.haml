@@ -2,9 +2,9 @@
   .form-group
     = f.label :type_of_raid, class: 'col-sm-4 control-label'
     .col-sm-10
-      = f.text_field :type_of_raid, class: 'form-control'
+      = f.select :type_of_raid, ['home', 'street', 'workplace', 'shelter'], include_blank: false, class: 'form-control'
   .form-group
-    = f.label :raided_at, class: 'col-sm-4 control-label'
+    = f.label :date_and_time_of_raid, class: 'col-sm-4 control-label'
     .col-sm-10
       = f.datetime_field :raided_at, class: 'form-control'
   .form-group
@@ -39,6 +39,23 @@
     = f.label :narrative_of_interaction_inside_building, class: 'col-sm-4 control-label'
     .col-sm-10
       = f.text_area :narrative_of_interaction_inside_home, class: 'form-control'
+  .form-group
+    = f.label :how_did_ice_respond_to_any_medical_issues, class: 'col-sm-4 control-label'
+    .col-sm-10
+      = f.text_area :response_to_medical_issues, class: 'form-control'
+  .form-group
+    = f.label :how_did_ice_respond_to_any_childcare_issues, class: 'col-sm-4 control-label'
+    .col-sm-10
+      = f.text_area :response_to_childcare_issues, class: 'form-control'
+  .form-group
+    = f.label :were_other_arrests_made_during_raid?, class: 'col-sm-4 control-label'
+    .col-sm-10
+      = f.text_area :other_arrests, class: 'form-control'
+  .form-group
+    = f.label :asked_others_for_documents_or_fingerprints?, class: 'col-sm-4 control-label'
+    .col-sm-10
+      = f.text_area :asked_others_for_documents_or_fingerprints, class: 'form-control'
+
   .form-group
     = f.label :notes, class: 'col-sm-4 control-label'
     .col-sm-10

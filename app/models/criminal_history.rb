@@ -1,0 +1,2 @@
+class CriminalHistory < ApplicationRecord
+end

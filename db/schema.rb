@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170226224820) do
+ActiveRecord::Schema.define(version: 20170227213319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 20170226224820) do
     t.datetime "updated_at",                        null: false
   end
 
+  create_table "criminal_histories", force: :cascade do |t|
+    t.integer  "client_id"
+    t.integer  "date_of_arrest"
+    t.string   "charge"
+    t.boolean  "convicted"
+    t.text     "notes"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
   create_table "raids", force: :cascade do |t|
     t.string   "type_of_raid"
     t.datetime "raided_at"
@@ -39,18 +49,23 @@ ActiveRecord::Schema.define(version: 20170226224820) do
     t.text     "narrative_of_door_interaction"
     t.text     "narrative_of_entrance"
     t.text     "narrative_of_interaction_inside_home"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
     t.string   "notes"
+    t.text     "response_to_medical_issues",                              comment: "How did they respond to any medical issues that were brought up?"
+    t.text     "response_to_childcare_issues",                            comment: "How did they respond to any childcare issues that were brought up?"
+    t.text     "other_arrests",                                           comment: "Were other arrests made during the raid?"
+    t.text     "asked_others_for_documents_or_fingerprints",              comment: "Did they ask other people for documents or fingerprints?"
   end
 
   create_table "raids_clients", force: :cascade do |t|
     t.integer  "raid_id"
     t.integer  "client_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.boolean  "arrested"
     t.string   "notes"
+    t.string   "immigration_status_at_time_of_raid"
   end
 
   create_table "users", force: :cascade do |t|
