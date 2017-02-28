@@ -6,6 +6,8 @@ class Raid < ApplicationRecord
 
   validates :address, :type_of_raid, :zip_code, :raided_at, presence: true
 
+  scope :sort_by_time, -> { order(raided_at: :asc) }
+
   def to_s
     "#{type_of_raid} - #{zip_code}:#{raided_at}"
   end

@@ -1,6 +1,6 @@
 class RaidsController < AuthenticatedController
   def index
-    @raids = Raid.all
+    @raids = Raid.sort_by_time
   end
 
   def edit

@@ -1,4 +1,4 @@
 = render partial: 'clients_table', locals: { clients: [@client] }
 
 %h2 Raids Involved In
-= render partial: 'raids/raids_table', locals: { raids: @client.raids }
+= render partial: 'raids/raids_table', locals: { raids: @client.raids.sort_by_time }
